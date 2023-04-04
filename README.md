@@ -11,13 +11,13 @@ This GitHub project demonstrates machine learning and computer vision techniques
   
 To install Python-AI-Self-Driving-Car-App, you can use pip to install the required packages. Here are the steps to get started:
 
-- Clone the repository using git clone https://github.com/your-username/Python-AI-Self-Driving-Car-App.git
+- Clone the repository using git clone `https://github.com/your-username/Python-AI-Self-Driving-Car-App.git`
   
-- Navigate to the project directory using cd Python-AI-Self-Driving-Car-App
+- Navigate to the project directory using cd `Python-AI-Self-Driving-Car-App`
   
-- Install the required packages using pip install -r requirements.txt
+- Install the required packages using `pip install -r requirements.txt`
   
-Note: The application has been developed and tested on Python 3.7.9, other versions of Python may cause compatibility issues.
+Note: The application has been developed and tested on Python 3.10.6, other versions of Python may cause compatibility issues.
 
 # Usage
 To run the application, navigate to the project directory and run python app.py. This will start the application and launch a window displaying the video feed from the webcam.
