@@ -20,7 +20,7 @@ algorithm_path = Path(tool_path + "\\algorithm")
 ''' car detection from an image '''
 
 # %%
-# choose an image to detect faces in
+# choose an image to detect cars in
 car_img = cv2.imread(str(media_path) + "\\car_image.jpg")
 # print(car_img) # debug
 
@@ -52,16 +52,10 @@ for (x,y,w,h) in car_coordinates:
 cv2.imshow("Sabrina Chowdhury's Car Detector App", car_img)
 cv2.waitKey(1000)
 
+# %%
 ''' car and pedestrian detection from a video '''
-# %%
-# load the cascade algorithm
-# haarcascade algorithm only takes the gray scale images
-# trained_face_data = cv2.CascadeClassifier(str(algorithm_path) + "\\haarcascade_frontalface_default.xml")
-# # print(trained_face_data) # debug
 
-# %%
 sample_video = cv2.VideoCapture(str(media_path) + "\\cars_and_pedestrians.mp4")
-
 
 # iterate forever over frames
 while True:
@@ -72,11 +66,11 @@ while True:
     # must convert to grayscale
     grayscaled_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
    
-    # detect faces
+    # detect cars
     car_coordinates  = car_tracker.detectMultiScale(grayscaled_frame)
     # print(car_coordinates) # debug
 
-    # get the face coordinates dynamically
+    # get the car coordinates dynamically
     for (x,y,w,h) in car_coordinates:
         cv2.rectangle(frame, (x,y), (x+w, y+h), (randrange(256), randrange(256), randrange(256)), 2)
 
