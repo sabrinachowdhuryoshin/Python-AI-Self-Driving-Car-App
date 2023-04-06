@@ -55,13 +55,16 @@ cv2.waitKey(1000)
 # %%
 ''' car and pedestrian detection from a video '''
 
-sample_video = cv2.VideoCapture(str(media_path) + "\\cars_and_pedestrians.mp4")
+# sample_video = cv2.VideoCapture(str(media_path) + "\\cars_and_pedestrians.mp4")
+sample_video = cv2.VideoCapture(str(media_path) + "\\tesla_dashcam.mp4")
+# sample_video = cv2.VideoCapture(str(media_path) + "\\car_dashcam.mp4")
 
 # iterate forever over frames
 while True:
 
     # read the current frame
     successful_frame_read, frame = sample_video.read()
+    print(frame) # debug
 
     # must convert to grayscale
     grayscaled_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
